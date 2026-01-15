@@ -42,7 +42,8 @@ func main() {
 	e.Use(middleware.CORS())
 	e.Use(middleware.RequestLogger())
 
-	e.GET("/calculations", getCalculation)
+	e.POST("/calculations", getCalculation)
 
 	e.Start("localhost:8080")
 }
+
